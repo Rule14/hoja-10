@@ -1,0 +1,309 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Campeonato deportivo</title>
+</head>
+<body>
+</br>
+    <label for="tipo">Seleccione el tipo de clasificatoria: </label>
+    <select id="tipo">
+        <option value="">--Haga una elección--</option>
+        <option value="cuartos">Cuartos</option>
+        <option value="semi">Semi Final</option>
+        <option value="final">Final</option>
+    </select>
+
+    <form></form>
+    <script>
+        let seleccionar = document.querySelector('select');
+        let formu = document.querySelector('form');
+        seleccionar.addEventListener('change',hacer_formulario);
+
+        function hacer_formulario(){
+            let eleccion = seleccionar.value;
+            if (eleccion=='cuartos'){
+                    document.getElementById("formu1").style.visibility="visible";
+                    document.getElementById("formu2").style.visibility="hidden";
+                    document.getElementById("formu3").style.visibility="hidden";
+            }
+            else if(eleccion=='semi'){
+                document.getElementById("formu2").style.visibility="visible";
+                document.getElementById("formu1").style.visibility="hidden";
+                document.getElementById("formu3").style.visibility="hidden";
+            }
+            else if(eleccion=='final'){
+                document.getElementById("formu3").style.visibility="visible";
+                document.getElementById("formu1").style.visibility="hidden";
+                document.getElementById("formu2").style.visibility="hidden";
+            }
+            else{
+                document.getElementById("formu3").style.visibility="hidden";
+                document.getElementById("formu1").style.visibility="hidden";
+                document.getElementById("formu2").style.visibility="hidden";
+            }
+        }
+    </script>
+    <form method="POST" action="E5.php" id="formu1">
+        <input type="hidden" name="formu" value="formu1">
+        <table border="2" align="center" width=100%>
+            <tr>
+                <td align="center">
+                    </br>
+                    <label for="nombre1">Nombre del equipo</label>
+                    <input type="text" name="nombre1">
+                    </br></br>
+                    <label for="pg1">Partidos ganados: </label>
+                    <input type="text" name="pg1">
+                    </br></br>
+                    <label for="pp1">Partidos perdidos: </label>
+                    <input type="text" name="pp1">
+                    </br></br>
+                    <label for="pe1">Partidos empatados: </label>
+                    <input type="text" name="pe1">
+                    </br></br>
+                </td>
+                <td align="center">
+                    </br>
+                    <label for="nombre2">Nombre del equipo</label>
+                    <input type="text" name="nombre2">
+                    </br></br>
+                    <label for="pg2">Partidos ganados: </label>
+                    <input type="text" name="pg2">
+                    </br></br>
+                    <label for="pp2">Partidos perdidos: </label>
+                    <input type="text" name="pp2">
+                    </br></br>
+                    <label for="pe2">Partidos empatados: </label>
+                    <input type="text" name="pe2">
+                    </br></br>
+                </td>
+                <td align="center">
+                    </br>
+                    <label for="nombre3">Nombre del equipo</label>
+                    <input type="text" name="nombre3">
+                    </br></br>
+                    <label for="pg3">Partidos ganados: </label>
+                    <input type="text" name="pg3">
+                    </br></br>
+                    <label for="pp3">Partidos perdidos: </label>
+                    <input type="text" name="pp3">
+                    </br></br>
+                    <label for="pe3">Partidos empatados: </label>
+                    <input type="text" name="pe3">
+                    </br></br>
+                </td>
+                <td align="center">
+                    </br>
+                    <label for="nombre4">Nombre del equipo</label>
+                    <input type="text" name="nombre4">
+                    </br></br>
+                    <label for="pg4">Partidos ganados: </label>
+                    <input type="text" name="pg4">
+                    </br></br>
+                    <label for="pp4">Partidos perdidos: </label>
+                    <input type="text" name="pp4">
+                    </br></br>
+                    <label for="pe4">Partidos empatados: </label>
+                    <input type="text" name="pe4">
+                    </br></br>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    </br>
+                    <label for="nombre5">Nombre del equipo</label>
+                    <input type="text" name="nombre5">
+                    </br></br>
+                    <label for="pg5">Partidos ganados: </label>
+                    <input type="text" name="pg5">
+                    </br></br>
+                    <label for="pp5">Partidos perdidos: </label>
+                    <input type="text" name="pp5">
+                    </br></br>
+                    <label for="pe5">Partidos empatados: </label>
+                    <input type="text" name="pe5">
+                    </br></br>
+                </td>
+                <td align="center">
+                    </br>
+                    <label for="nombre6">Nombre del equipo</label>
+                    <input type="text" name="nombre6">
+                    </br></br>
+                    <label for="pg6">Partidos ganados: </label>
+                    <input type="text" name="pg6">
+                    </br></br>
+                    <label for="pp6">Partidos perdidos: </label>
+                    <input type="text" name="pp6">
+                    </br></br>
+                    <label for="pe6">Partidos empatados: </label>
+                    <input type="text" name="pe6">
+                    </br></br>
+                </td>
+                <td align="center">
+                    </br>
+                    <label for="nombre7">Nombre del equipo</label>
+                    <input type="text" name="nombre7">
+                    </br></br>
+                    <label for="pg7">Partidos ganados: </label>
+                    <input type="text" name="pg7">
+                    </br></br>
+                    <label for="pp7">Partidos perdidos: </label>
+                    <input type="text" name="pp7">
+                    </br></br>
+                    <label for="pe7">Partidos empatados: </label>
+                    <input type="text" name="pe7">
+                    </br></br>  
+                </td>
+                <td align="center">
+                </br>
+                <label for="nombre8">Nombre del equipo</label>
+                <input type="text" name="nombre8">
+                </br></br>
+                <label for="pg8">Partidos ganados: </label>
+                <input type="text" name="pg8">
+                </br></br>
+                <label for="pp8">Partidos perdidos: </label>
+                <input type="text" name="pp8">
+                </br></br>
+                <label for="pe8">Partidos empatados: </label>
+                <input type="text" name="pe8">
+                </br></br>
+                </td>
+            </tr>
+        </table>
+        <table align="center">
+            <tr>
+                <td align="center">
+                </br>
+                    <input type="submit" value="Enviar">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <form method="POST" action="E5.php" id="formu2">
+        <input type="hidden" name="formu" value="formu2">
+        <table border="2" align="center" width=100%>
+            <tr>
+                <td align="center">
+                    </br>
+                    <label for="nombre1">Nombre del equipo</label>
+                    <input type="text" name="nombre1">
+                    </br></br>
+                    <label for="pg1">Partidos ganados: </label>
+                    <input type="text" name="pg1">
+                    </br></br>
+                    <label for="pp1">Partidos perdidos: </label>
+                    <input type="text" name="pp1">
+                    </br></br>
+                    <label for="pe1">Partidos empatados: </label>
+                    <input type="text" name="pe1">
+                    </br></br>
+                </td>
+                <td align="center">
+                    </br>
+                    <label for="nombre2">Nombre del equipo</label>
+                    <input type="text" name="nombre2">
+                    </br></br>
+                    <label for="pg2">Partidos ganados: </label>
+                    <input type="text" name="pg2">
+                    </br></br>
+                    <label for="pp2">Partidos perdidos: </label>
+                    <input type="text" name="pp2">
+                    </br></br>
+                    <label for="pe2">Partidos empatados: </label>
+                    <input type="text" name="pe2">
+                    </br></br>
+                </td>
+                <td align="center">
+                    </br>
+                    <label for="nombre3">Nombre del equipo</label>
+                    <input type="text" name="nombre3">
+                    </br></br>
+                    <label for="pg3">Partidos ganados: </label>
+                    <input type="text" name="pg3">
+                    </br></br>
+                    <label for="pp3">Partidos perdidos: </label>
+                    <input type="text" name="pp3">
+                    </br></br>
+                    <label for="pe3">Partidos empatados: </label>
+                    <input type="text" name="pe3">
+                    </br></br>
+                </td>
+                <td align="center">
+                    </br>
+                    <label for="nombre4">Nombre del equipo</label>
+                    <input type="text" name="nombre4">
+                    </br></br>
+                    <label for="pg4">Partidos ganados: </label>
+                    <input type="text" name="pg4">
+                    </br></br>
+                    <label for="pp4">Partidos perdidos: </label>
+                    <input type="text" name="pp4">
+                    </br></br>
+                    <label for="pe4">Partidos empatados: </label>
+                    <input type="text" name="pe4">
+                    </br></br>
+                </td>
+            </tr>
+        </table>
+        <table align="center">
+            <tr>
+                <td align="center">
+                </br>
+                    <input type="submit" value="Enviar">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <form method="POST" action="E5.php" id="formu3">
+        <input type="hidden" name="formu" value="formu3">
+        <table border="2" align="center" width=100%>
+            <tr>
+                <td align="center">
+                    </br>
+                    <label for="nombre1">Nombre del equipo</label>
+                    <input type="text" name="nombre1">
+                    </br></br>
+                    <label for="pg1">Partidos ganados: </label>
+                    <input type="text" name="pg1">
+                    </br></br>
+                    <label for="pp1">Partidos perdidos: </label>
+                    <input type="text" name="pp1">
+                    </br></br>
+                    <label for="pe1">Partidos empatados: </label>
+                    <input type="text" name="pe1">
+                    </br></br>
+                </td>
+                <td align="center">
+                    </br>
+                    <label for="nombre2">Nombre del equipo</label>
+                    <input type="text" name="nombre2">
+                    </br></br>
+                    <label for="pg2">Partidos ganados: </label>
+                    <input type="text" name="pg2">
+                    </br></br>
+                    <label for="pp2">Partidos perdidos: </label>
+                    <input type="text" name="pp2">
+                    </br></br>
+                    <label for="pe2">Partidos empatados: </label>
+                    <input type="text" name="pe2">
+                    </br></br>
+                </td>
+            </tr>
+        </table>
+        <table align="center">
+            <tr>
+                <td align="center">
+                </br>
+                    <input type="submit" value="Enviar">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        document.getElementById("formu1").style.visibility="hidden";
+        document.getElementById("formu2").style.visibility="hidden";
+        document.getElementById("formu3").style.visibility="hidden";
+    </script>
+</body>
+</html> <!-- UwU -->
